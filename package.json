@@ -1,0 +1,26 @@
+{
+  "name": "minecraft-zoo-addon",
+  "version": "1.0.0",
+  "description": "Interactive Zoo Addon for Minecraft Bedrock with AI Caretakers and Permission System",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc --watch",
+    "clean": "rm -rf packs/behavior_pack/scripts/*",
+    "dev": "npm run clean && npm run watch",
+    "package": "npm run build && cd packs && zip -r ../zoo-addon.mcpack behavior_pack/ resource_pack/"
+  },
+  "keywords": ["minecraft", "bedrock", "addon", "zoo", "typescript", "scripting"],
+  "author": "Zoo Addon Developer",
+  "license": "MIT",
+  "dependencies": {
+    "@minecraft/server": "^1.18.0-beta",
+    "@minecraft/server-admin": "^1.0.0-beta",
+    "@minecraft/server-gametest": "^1.0.0-beta",
+    "@minecraft/server-net": "^1.0.0-beta",
+    "@minecraft/server-ui": "^1.3.0-beta"
+  },
+  "devDependencies": {
+    "typescript": "^5.0.0"
+  }
+}

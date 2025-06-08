@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "module": "ES2020",
+    "target": "ES2021",
+    "moduleResolution": "Node",
+    "allowSyntheticDefaultImports": true,
+    "baseUrl": "./src",
+    "rootDir": "./src",
+    "outDir": "./packs/behavior_pack/scripts",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true
+  },
+  "exclude": ["node_modules", "packs"],
+  "include": ["src/**/*"]
+} 
