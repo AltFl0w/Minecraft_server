@@ -1,0 +1,32 @@
+services:
+  minecraft-zoo-test:
+    image: itzg/minecraft-bedrock-server:latest
+    container_name: zoo-test-server
+    restart: unless-stopped
+    stdin_open: true
+    tty: true
+    ports:
+      - "19132:19132/udp"  # Standard Bedrock port
+    volumes:
+      - ./test-data:/data
+      - ./packs/behavior_pack:/data/behavior_packs/zoo-addon-bp
+      - ./packs/resource_pack:/data/resource_packs/zoo-addon-rp
+    environment:
+      - EULA=TRUE
+      - SERVER_NAME=Zoo Test Server
+      - GAMEMODE=creative
+      - DIFFICULTY=peaceful
+      - ALLOW_CHEATS=true
+      - MAX_PLAYERS=4
+      - LEVEL_NAME=zoo-test-world
+      - ENABLE_LAN_VISIBILITY=true
+    networks:
+      - zoo-test-network
+
+volumes:
+  test-data:
+    driver: local
+
+networks:
+  zoo-test-network:
+    driver: bridge 

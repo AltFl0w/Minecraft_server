@@ -1,0 +1,37 @@
+services:
+  minecraft-zoo:
+    image: 05jchambers/legendary-bedrock-container:latest
+    container_name: minecraft-zoo-server
+    restart: unless-stopped
+    stdin_open: true
+    tty: true
+    ports:
+      - "19134:19132/udp"  # Different port to avoid conflicts
+      - "19135:19133/udp"  # Different port to avoid conflicts
+    volumes:
+      - minecraft-zoo-data:/minecraft
+      - zoo-behavior-packs:/minecraft/behavior_packs
+      - zoo-resource-packs:/minecraft/resource_packs
+    environment:
+      - TZ=America/New_York
+      - NoPermCheck=Y
+      - QuietCurl=Y
+      - ServerName=Zoo Server
+      - Gamemode=creative
+      - Difficulty=peaceful
+      - AllowCheats=true
+      - MaxPlayers=10
+    networks:
+      - zoo-network
+
+volumes:
+  minecraft-zoo-data:
+    driver: local
+  zoo-behavior-packs:
+    driver: local
+  zoo-resource-packs:
+    driver: local
+
+networks:
+  zoo-network:
+    driver: bridge 

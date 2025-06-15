@@ -1,0 +1,32 @@
+services:
+  minecraft-super-zoo:
+    image: itzg/minecraft-bedrock-server:latest
+    container_name: super-zoo-server
+    restart: unless-stopped
+    stdin_open: true
+    tty: true
+    ports:
+      - "19132:19132/udp"  # Standard Bedrock port
+    volumes:
+      - ./zoo-world-data:/data
+      - ./packs/behavior_pack:/data/behavior_packs/zoo-addon-bp
+      - ./packs/resource_pack:/data/resource_packs/zoo-addon-rp
+    environment:
+      - EULA=TRUE
+      - SERVER_NAME=Super Zoo Server
+      - GAMEMODE=creative
+      - DIFFICULTY=peaceful
+      - ALLOW_CHEATS=true
+      - MAX_PLAYERS=10
+      - LEVEL_NAME=super-zoo
+      - ENABLE_LAN_VISIBILITY=true
+    networks:
+      - super-zoo-network
+
+volumes:
+  zoo-world-data:
+    driver: local
+
+networks:
+  super-zoo-network:
+    driver: bridge 
