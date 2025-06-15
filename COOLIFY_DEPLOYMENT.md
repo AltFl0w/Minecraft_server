@@ -4,6 +4,7 @@
 - Coolify server running on Linux
 - Access to Coolify web interface
 - Ports 19134-19135 available on your server
+- [Project structure reference](./minecraft-zoo-addon/README.md)
 
 ## 🎯 Step-by-Step Deployment
 
@@ -18,7 +19,7 @@
 
 1. **Service Name**: `minecraft-zoo-server`
 2. **Description**: `Clean Minecraft Bedrock server for Zoo addon`
-3. **Copy the contents** of `coolify-zoo-server.yml` into the Docker Compose field
+3. **Copy the contents** of `minecraft-zoo-server/coolify-zoo-server.yml` into the Docker Compose field
 
 ### Step 3: Environment Variables (Optional)
 Add these if you want to customize:
@@ -32,6 +33,7 @@ DIFFICULTY=peaceful
 ### Step 4: Port Configuration
 - **19134/udp** → Minecraft Bedrock IPv4
 - **19135/udp** → Minecraft Bedrock IPv6
+- **8080** → (Optional) AI service port for future use
 
 ### Step 5: Deploy
 1. **Click "Deploy"**
@@ -51,14 +53,24 @@ DIFFICULTY=peaceful
 2. **Enter your server details**
 3. **Connect and enjoy!**
 
-## 📦 Installing Your Zoo Addon
+## 📦 Installing & Updating Your Zoo Addon
+
+### Packaging the Addon
+- **After making changes to the add-on code:**
+  1. Go to `minecraft-zoo-addon/`
+  2. Run:
+     ```bash
+     npm run build
+     npm run package
+     ```
+  3. This will update the compiled files and the `zoo-addon.mcpack` package.
 
 ### Option 1: Volume Mount (Recommended)
 1. **Copy addon files** to server volumes:
    ```bash
    # On your Coolify server
-   docker cp packs/behavior_pack/ minecraft-zoo-server:/minecraft/behavior_packs/
-   docker cp packs/resource_pack/ minecraft-zoo-server:/minecraft/resource_packs/
+   docker cp minecraft-zoo-addon/packs/behavior_pack/ minecraft-zoo-server:/minecraft/behavior_packs/
+   docker cp minecraft-zoo-addon/packs/resource_pack/ minecraft-zoo-server:/minecraft/resource_packs/
    ```
 
 ### Option 2: Manual Upload
@@ -83,10 +95,15 @@ DIFFICULTY=peaceful
 - Verify manifest.json files are valid
 - Check server logs for addon errors
 
+## 🧪 Testing & Debugging
+- Use Coolify's logs to view server output and errors
+- Restart the server after updating add-on files
+- Test commands and permissions in-game
+
 ## 🎯 Next Steps
 
 1. **Deploy the server** using this guide
-2. **Install the zoo addon** we created
+2. **Install or update the zoo addon** as described above
 3. **Test connection** from your devices
 4. **Start building** your zoo!
-5. **Phase 2**: Implement AI caretakers 
+5. **Phase 2**: Implement AI caretakers (see `suggestions.md` for roadmap) 

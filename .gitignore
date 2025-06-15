@@ -1,1 +1,28 @@
-/.history
+/node_modules/
+/dist/
+.DS_Store
+npm-debug.log*
+.env
+*.log
+*.tmp
+*.bak
+*.swp
+*.swo
+*.zip
+*.tar.gz
+*.mcpack
+# Minecraft server/world data
+minecraft-zoo-server/worlds/backup*/
+minecraft-zoo-server/backup*/
+minecraft-zoo-server/*.log
+minecraft-zoo-server/*.tmp
+minecraft-zoo-server/*.bak
+minecraft-zoo-server/*.zip
+minecraft-zoo-server/*.tar.gz
+# Ignore compiled JS if using TypeScript
+minecraft-zoo-addon/packs/behavior_pack/scripts/
+# Ignore VSCode and OS files
+.vscode/
+.history
+test-data
+zoo-world-data

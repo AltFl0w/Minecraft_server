@@ -106,22 +106,20 @@ The addon is highly configurable through in-game commands or by editing the conf
 ## 🏗️ Project Structure
 
 ```
-src/
-├── main.ts                 # Main entry point
-├── systems/
-│   ├── PermissionManager.ts # Role-based permissions
-│   ├── AICaretakerManager.ts # AI caretaker system
-│   ├── ConfigManager.ts     # Configuration management
-│   └── CommandHandler.ts    # Chat command processing
-└── config/                 # Configuration files
-
-packs/
-├── behavior_pack/          # Minecraft behavior pack
-│   ├── manifest.json
-│   └── scripts/           # Compiled JavaScript
-└── resource_pack/         # Minecraft resource pack
-    └── manifest.json
+New_Minecraft/
+├── minecraft-zoo-addon/         # Add-on development (this folder)
+│   ├── packs/                   # Behavior/resource packs
+│   ├── src/                     # TypeScript source code
+│   ├── package.json, tsconfig.json, etc.
+│   └── README.md
+├── minecraft-zoo-server/        # Dockerized Bedrock server
+│   ├── coolify-zoo-server.yml   # Docker Compose for Coolify
+│   ├── server.properties, worlds/, etc.
+│   └── README.md
+└── .gitignore, etc.
 ```
+
+- See [`../minecraft-zoo-server/README.md`](../minecraft-zoo-server/README.md) for server deployment and Docker instructions.
 
 ## 🤖 AI Caretakers (Coming Soon!)
 
@@ -225,3 +223,15 @@ Special thanks to:
 - Microsoft for the Minecraft Scripting API
 - The Bedrock addon development community
 - All the young builders who inspire us to create better tools 
+
+## 📦 Rebuilding and Packaging the Addon
+
+After making changes to the add-on code:
+
+1. Go to the `minecraft-zoo-addon/` directory
+2. Run:
+   ```bash
+   npm run build
+   npm run package
+   ```
+3. This will update the compiled files and the `zoo-addon.mcpack` package for installation or server upload 
