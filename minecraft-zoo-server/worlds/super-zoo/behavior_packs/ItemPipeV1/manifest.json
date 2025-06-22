@@ -1,0 +1,71 @@
+{
+	"format_version": 2,
+	"metadata": {
+		"authors": [
+			"Unknonw Mcpe"
+		]
+	},
+	"header": {
+		"name": "Item Pipe V1.3.1 BP",
+		"description": "Unknonw Mcpe Yt",
+		"min_engine_version": [
+			1,
+			21,
+			70
+		],
+		"uuid": "8ab84ba3-c676-46e2-a03c-251c32fd9245",
+		"version": [
+			1,
+			3,
+			1
+		]
+	},
+	"modules": [
+		{
+			"type": "data",
+			"uuid": "17221716-7e34-4cfd-88c2-54623847fb4f",
+			"version": [
+				1,
+				3,
+				1
+			]
+		},
+		{
+			"type": "script",
+			"language": "javascript",
+			"uuid": "cec7c4b3-44e9-478e-ae92-7317ff4bc672",
+			"entry": "scripts/main.js",
+			"version": [
+				1,
+				3,
+				1
+			]
+		}
+	],
+	"dependencies": [
+		{
+			"uuid": "841147e7-8f03-4782-aa90-8f4ccb1d1914",
+			"version": [
+				1,
+				3,
+				1
+			]
+		},
+		{
+			"module_name": "@minecraft/server",
+			"version": [
+			1,
+			11,
+			0
+			]
+		},
+		{
+			"module_name": "@minecraft/server-ui",
+			"version": [
+			1,
+			1,
+			0
+			]
+		}
+	]
+}

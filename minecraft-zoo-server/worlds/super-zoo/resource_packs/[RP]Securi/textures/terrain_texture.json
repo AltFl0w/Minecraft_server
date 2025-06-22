@@ -1,0 +1,13 @@
+{
+	"num_mip_levels": 4,
+	"padding": 8,
+	"resource_pack_name": "Security Cameras",
+	"texture_name": "atlas.terrain",
+	"texture_data": {
+		"bn_security_camera": {
+			"textures": [
+				"textures/blocks/security_camera"
+			]
+		}
+	}
+}

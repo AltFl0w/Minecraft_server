@@ -1,0 +1,26 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "um:storage_connector_recipe"
+    },
+    "tags": ["crafting_table"],
+    "pattern": [
+      " I ",
+      "IRI",
+      " I "
+    ],
+    "key": {
+      "I": {
+        "item": "minecraft:iron_ingot"
+      },
+      "R": {
+        "item": "minecraft:redstone"
+      }
+    },
+    "result": {
+      "item": "um:storage_connector",
+      "count": 1
+    }
+  }
+}

@@ -1,0 +1,57 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "fb:chica",
+			"min_engine_version": "1.8.0",
+			"materials": {
+				"default": "spider"
+			},
+			"textures": {
+				"default": "textures/entity/fnaf1/chica",
+				"blue": "textures/entity/fnaf1/chica_movie",
+				"var1": "textures/entity/fnaf1/vars/Hellborn_chica_skin_remake",
+				"var2": "textures/entity/fnaf1/vars/glamrock_chica",
+				"var3": "textures/entity/fnaf1/vars/fnaf_plus_chica"
+			},
+			"animations": {
+				"default_pose": "animation.chik.geo.stage",
+				"no_pose": "animation.chik.geo.CAM1A",
+				"solemn_pose": "animation.chik.geo.CAM1Astare",
+				"athena_pose": "animation.chik.geo.CAM1B",
+				"brandish_pose": "animation.chik.geo.CAM7",
+				"honor_pose": "animation.chik.geo.CAM7stare",
+				"entertain_pose": "animation.chik.geo.CAM4A",
+				"salute_pose": "animation.chik.geo.CAM4Aclose",
+				"riposte_pose": "animation.chik.geo.CAM4B",
+				"zombie_pose": "animation.chik.geo.CAM4Btwitch",
+				"cancan_a_pose": "animation.chik.geo.leftdoor",
+				"cancan_b_pose": "animation.chik.geo.stage",
+				"hero_pose": "animation.chik.geo.CAM1A",
+				"wiggle": "animation.chik.geo.CAM1Astare",
+				"controller.pose": "controller.animation.armor_stand.pose",
+				"controller.wiggling": "controller.animation.armor_stand.wiggle"
+			},
+			"scripts": {
+				"initialize": [
+					"variable.armor_stand.pose_index = 0;",
+					"variable.armor_stand.hurt_time = 0;"
+				],
+				"animate": [
+					"controller.pose",
+					"controller.wiggling"
+				]
+			},
+			"geometry": {
+				"default": "geometry.chik.geo"
+			},
+			"render_controllers": [
+				"controller.render.chica"
+			],
+			"enable_attachables": true,
+			"spawn_egg": {
+				"texture": "chica_icon_normal"
+			}
+		}
+	}
+}

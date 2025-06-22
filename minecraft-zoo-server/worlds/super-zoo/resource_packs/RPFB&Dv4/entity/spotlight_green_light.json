@@ -1,0 +1,21 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "fd:spotlight_green_light",
+			"min_engine_version": "1.8.0",
+			"materials": {
+				"default": "fbnd_light"
+			},
+			"textures": {
+				"default": "textures/blocks/spotlights/yellow_spotlight_ray"
+			},
+			"geometry": {
+				"default": "geometry.spotlight_green_light"
+			},
+			"render_controllers": [
+				"controller.render.spotlight_green_light"
+			]
+		}
+	}
+}

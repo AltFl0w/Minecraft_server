@@ -1,0 +1,20 @@
+{
+	"format_version": "1.20.50",
+	"minecraft:item": {
+		"description": {
+			"identifier": "um:storage_connector",
+			"menu_category": {
+				"category": "items"
+			}
+		},
+		"components": {
+			"minecraft:max_stack_size": 1,
+			"minecraft:icon": {
+				"texture": "storageconnector"
+			},
+			"minecraft:display_name": {
+				"value": "Storage Connector\n§aMin Chest = 1\n§cMax Chest = 5"
+			}
+		}
+	}
+}

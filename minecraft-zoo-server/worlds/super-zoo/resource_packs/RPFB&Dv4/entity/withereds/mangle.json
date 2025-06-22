@@ -1,0 +1,49 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "fb:mangle",
+			"materials": {
+				"default": "spider"
+			},
+			"textures": {
+				"default": "textures/entity/fnaf2/mangle",
+				"blue": "textures/entity/fnaf2/mangle"
+			},
+			"animations": {
+				"look_at_target": "animation.common.look_at_target",
+				"fb_mangle_base": "animation.new_mangle.base_idle",
+				"fb_mangle_walk": "animation.new_mangle.walk",
+				"fb_mangle_start": "animation.new_mangle.base_idle",
+				"fb_climb_mangle": "animation.new_mangle.walk2",
+				"fb_mangle_attack": "animation.new_toy_foxy.attack",
+				"resting": "animation.new_mangle.ceiling",
+				"base": "controller.animation.fb_mangle.base",
+				"walk": "controller.animation.fb_mangle.walk",
+				"attack": "controller.animation.fb_mangle.attack",
+				"function": "controller.animation.fb_mangle.function"
+			},
+			"scripts": {
+				"animate": [
+					"base",
+					"walk",
+					"attack",
+					"function"
+				],
+				"pre_animation": [
+					"variable.attack = Math.sin(variable.attack_time * 10.0);"
+				]
+			},
+			"geometry": {
+				"default": "geometry.new_mangle"
+			},
+			"render_controllers": [
+				"controller.render.freddy"
+			],
+			"enable_attachables": true,
+			"spawn_egg": {
+				"texture": "mangle_statue"
+			}
+		}
+	}
+}

@@ -1,0 +1,9 @@
+{
+    "resource_pack_name": "zoo_command_center",
+    "texture_name": "atlas.items",
+    "texture_data": {
+        "command_center": {
+            "textures": "textures/items/command_center"
+        }
+    }
+} 

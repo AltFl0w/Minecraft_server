@@ -1,0 +1,32 @@
+{
+	"format_version": "1.12",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "bn:security_camera"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"key": {
+			"I": {
+				"item": "minecraft:iron_ingot"
+			},
+			"R": {
+				"item": "minecraft:redstone"
+			},
+			"G": {
+				"item": "minecraft:glass_pane"
+			}
+		},
+		"pattern": [
+			"IRI",
+			"RGR",
+			"IRI"
+		],
+		"result": {
+			"item": "bn:security_camera",
+			"count": 1,
+			"data": 0
+		}
+	}
+}

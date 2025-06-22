@@ -1,0 +1,26 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "um:storage_remont_recipe"
+    },
+    "tags": ["crafting_table"],
+    "pattern": [
+      " G ",
+      "GDG",
+      " G "
+    ],
+    "key": {
+      "G": {
+        "item": "minecraft:gold_ingot"
+      },
+      "D": {
+        "item": "minecraft:diamond"
+      }
+    },
+    "result": {
+      "item": "um:storage_remont",
+      "count": 1
+    }
+  }
+}

@@ -1,0 +1,28 @@
+{
+	"format_version": "1.8.0",
+	"render_controllers": {
+		"controller.render.purple_car": {
+			"geometry": "geometry.default",
+			"materials": [
+				{
+					"*": "material.default"
+				}
+			],
+			"textures": [
+				"array.variants[query.variant]"
+			],
+			"arrays": {
+				"textures": {
+					"Array.variants": [
+						"Texture.default",
+						"Texture.blue",
+						"Texture.red",
+						"Texture.purple",
+						"Texture.var1",
+						"Texture.var2"
+					]
+				}
+			}
+		}
+	}
+}

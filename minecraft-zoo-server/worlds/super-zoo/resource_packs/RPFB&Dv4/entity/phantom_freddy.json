@@ -1,0 +1,53 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "fb:phantom_freddy",
+			"min_engine_version": "1.8.0",
+			"materials": {
+				"default": "enderman"
+			},
+			"textures": {
+				"default": "textures/entity/fnaf3/phantom_freddy"
+			},
+			"spawn_egg": {
+				"texture": "phantom_freddy_statue"
+			},
+			"animations": {
+				"default_pose": "animation.new_phantom_freddy.idle",
+				"no_pose": "animation.new_phantom_freddy.idle",
+				"solemn_pose": "animation.new_phantom_freddy.idle",
+				"athena_pose": "animation.new_phantom_freddy.idle",
+				"brandish_pose": "animation.new_phantom_freddy.idle",
+				"honor_pose": "animation.new_phantom_freddy.idle",
+				"entertain_pose": "animation.new_phantom_freddy.idle",
+				"salute_pose": "animation.new_phantom_freddy.idle",
+				"riposte_pose": "animation.new_phantom_freddy.idle",
+				"zombie_pose": "animation.new_phantom_freddy.idle",
+				"cancan_a_pose": "animation.new_phantom_freddy.idle",
+				"cancan_b_pose": "animation.new_phantom_freddy.idle",
+				"hero_pose": "animation.new_phantom_freddy.idle",
+				"wiggle": "animation.armor_stand.wiggle",
+				"controller.pose": "controller.animation.armor_stand.pose",
+				"controller.wiggling": "controller.animation.armor_stand.wiggle"
+			},
+			"scripts": {
+				"initialize": [
+					"variable.armor_stand.pose_index = 0;",
+					"variable.armor_stand.hurt_time = 0;"
+				],
+				"animate": [
+					"controller.pose",
+					"controller.wiggling"
+				]
+			},
+			"geometry": {
+				"default": "geometry.new_phantom_freddy"
+			},
+			"render_controllers": [
+				"controller.render.armor_stand"
+			],
+			"enable_attachables": true
+		}
+	}
+}

@@ -1,0 +1,35 @@
+{
+	"format_version": 2,
+	"header": {
+		"name": "Cloude Storage Mcpe RP 2.0.1",
+		"description": "Unknown Mcpe YT",
+		"min_engine_version": [
+			1,
+			21,
+			50
+		],
+		"uuid": "dd302710-e8d0-44b4-82ff-96da6bbc2111",
+		"version": [
+			2,
+			0,
+			1
+		]
+	},
+	"modules": [
+		{
+			"type": "resources",
+			"uuid": "8a6b085c-386c-49f8-83b5-dd3f79a98264",
+			"version": [
+				1,
+				0,
+				0
+			]
+		}
+	],
+"dependencies": [
+  {
+    "uuid": "5bc601a6-cb6f-11ef-9cd2-0242ac120111",
+    "version": [1, 0, 0]
+  }
+]
+}

@@ -1,0 +1,17 @@
+{
+    "format_version": 2,
+    "header": {
+        "name": "Dramatic Skys Bedrock Demo 1.0",
+        "description": "Dramatic Skys Demo",
+        "uuid": "7641266e-b8bb-4a99-9e92-ce701f913e28",
+        "version": [1, 0, 0],
+        "min_engine_version": [1, 14, 0]
+    },
+    "modules": [
+        {
+            "type": "resources",
+            "uuid": "58e2ccb5-b945-4b70-91c5-535f064ce83d",
+            "version": [1, 0, 0]
+        }
+    ]
+}

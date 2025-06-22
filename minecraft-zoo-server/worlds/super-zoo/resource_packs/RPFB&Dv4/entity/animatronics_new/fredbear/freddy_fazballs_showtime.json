@@ -1,0 +1,33 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "fb:showtime_possed_fredbear",
+			"materials": {
+				"default": "enderman"
+			},
+			"textures": {
+				"default": "textures/entity/fnaf1/fredbear"
+			},
+			"geometry": {
+				"default": "geometry.the_new_fredbear"
+			},
+			"animations": {
+				"showtime": "animation.fredbear.geo.stage",
+				"showtime_off": "animation.fredbear.geo.idle",
+				"showtime_ex": "controller.animation.fb_animatronics.showtime"
+			},
+			"scripts": {
+				"animate": [
+					"showtime_ex"
+				]
+			},
+			"render_controllers": [
+				"controller.render.nothing"
+			],
+			"spawn_egg": {
+				"texture": "fredbear_showtime"
+			}
+		}
+	}
+}

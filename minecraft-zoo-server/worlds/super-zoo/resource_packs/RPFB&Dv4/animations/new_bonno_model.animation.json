@@ -1,0 +1,656 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.new_bonno.idle1": {
+			"loop": true,
+			"bones": {
+				"upperpart": {
+					"rotation": [
+						0,
+						-5,
+						-5
+					]
+				},
+				"feddyHed": {
+					"rotation": [
+						10,
+						0,
+						10
+					]
+				},
+				"jaw": {
+					"rotation": [
+						7.5,
+						0,
+						0
+					]
+				},
+				"armL": {
+					"rotation": [
+						0,
+						0,
+						22.5
+					]
+				},
+				"lower2": {
+					"rotation": [
+						-34.10987,
+						-17.35397,
+						-9.50109
+					]
+				},
+				"fingers": {
+					"rotation": [
+						0,
+						0,
+						-35
+					]
+				},
+				"thumb": {
+					"rotation": [
+						0,
+						-45,
+						0
+					]
+				},
+				"armL2": {
+					"rotation": [
+						172.5,
+						12.5,
+						-180
+					]
+				},
+				"lower7": {
+					"rotation": [
+						0,
+						-12.5,
+						0
+					]
+				},
+				"fingers5": {
+					"rotation": [
+						0,
+						0,
+						-55
+					]
+				},
+				"thumb3": {
+					"rotation": [
+						0,
+						32.5,
+						0
+					]
+				},
+				"upper6": {
+					"rotation": [
+						-10,
+						17.5,
+						0
+					]
+				},
+				"lower3": {
+					"rotation": [
+						12.5,
+						0,
+						0
+					]
+				},
+				"legR": {
+					"rotation": [
+						0,
+						-17.5,
+						0
+					]
+				}
+			}
+		},
+		"animation.new_bonno.idle2": {
+			"loop": true,
+			"bones": {
+				"upperpart": {
+					"rotation": [
+						0,
+						0,
+						7.5
+					]
+				},
+				"jaw3": {
+					"rotation": [
+						20,
+						0,
+						0
+					]
+				},
+				"armL": {
+					"rotation": [
+						5,
+						15,
+						10
+					]
+				},
+				"lower2": {
+					"rotation": [
+						0,
+						22.5,
+						0
+					]
+				},
+				"fingers": {
+					"rotation": [
+						0,
+						0,
+						-10
+					]
+				},
+				"thumb": {
+					"rotation": [
+						0,
+						-25,
+						0
+					]
+				},
+				"armL2": {
+					"rotation": [
+						-168.52635,
+						81.54787,
+						72.70723
+					]
+				},
+				"lower7": {
+					"rotation": [
+						0,
+						0,
+						75
+					]
+				},
+				"hand3": {
+					"rotation": [
+						-12.5,
+						0,
+						0
+					]
+				},
+				"legL": {
+					"rotation": [
+						0,
+						10,
+						0
+					]
+				},
+				"legR": {
+					"rotation": [
+						0,
+						-12.5,
+						0
+					]
+				}
+			}
+		},
+		"animation.new_bonno.idle3": {
+			"loop": true,
+			"bones": {
+				"upperpart": {
+					"rotation": [
+						22.5,
+						0,
+						0
+					]
+				},
+				"head": {
+					"rotation": [
+						-12.5,
+						0,
+						-25
+					]
+				},
+				"masktop": {
+					"rotation": [
+						52.5,
+						0,
+						0
+					]
+				},
+				"Maskfront": {
+					"rotation": [
+						-68.82717,
+						18.74724,
+						7.09597
+					],
+					"position": [
+						-1,
+						-10,
+						-1
+					]
+				},
+				"earL": {
+					"rotation": [
+						0,
+						0,
+						-25
+					]
+				},
+				"earR": {
+					"rotation": [
+						56.19714,
+						-10.54794,
+						14.04397
+					]
+				},
+				"armL": {
+					"rotation": [
+						-8.65088,
+						11.72145,
+						13.0867
+					]
+				},
+				"lower2": {
+					"rotation": [
+						-100.84039,
+						-24.22153,
+						3.12484
+					]
+				},
+				"thumb": {
+					"rotation": [
+						0,
+						-7.5,
+						0
+					]
+				},
+				"armL2": {
+					"rotation": [
+						-155.10133,
+						27.77005,
+						152.31965
+					]
+				},
+				"lower7": {
+					"rotation": [
+						-205,
+						-180,
+						-92.5
+					]
+				},
+				"fingers5": {
+					"rotation": [
+						0,
+						0,
+						-32.5
+					]
+				},
+				"thumb3": {
+					"rotation": [
+						0,
+						22.5,
+						0
+					]
+				},
+				"legL": {
+					"rotation": [
+						-5.22206,
+						20.68502,
+						5.22206
+					]
+				},
+				"lower3": {
+					"rotation": [
+						7.23328,
+						7.75745,
+						-1.51666
+					]
+				},
+				"legR": {
+					"rotation": [
+						0,
+						-25,
+						0
+					]
+				}
+			}
+		},
+		"animation.new_bonno.idle4": {
+			"loop": true,
+			"bones": {
+				"feddy": {
+					"position": [
+						0,
+						-2,
+						0
+					]
+				},
+				"upperpart": {
+					"rotation": [
+						17.5,
+						0,
+						0
+					]
+				},
+				"jaw": {
+					"rotation": [
+						27.5,
+						0,
+						0
+					]
+				},
+				"bone2": {
+					"position": [
+						0,
+						0.3,
+						0
+					]
+				},
+				"armL": {
+					"rotation": [
+						-180,
+						0,
+						-60
+					]
+				},
+				"lower2": {
+					"rotation": [
+						0,
+						0,
+						-112.5
+					]
+				},
+				"hand": {
+					"rotation": [
+						0,
+						0,
+						32.5
+					]
+				},
+				"armL2": {
+					"rotation": [
+						-360,
+						180,
+						-120
+					]
+				},
+				"lower7": {
+					"rotation": [
+						-112.5,
+						0,
+						0
+					]
+				},
+				"hand3": {
+					"rotation": [
+						77.45348,
+						-32.05047,
+						81.80022
+					]
+				},
+				"legL": {
+					"rotation": [
+						-57.5,
+						35,
+						0
+					]
+				},
+				"lower3": {
+					"rotation": [
+						60,
+						0,
+						0
+					]
+				},
+				"legR": {
+					"rotation": [
+						-53.53243,
+						-44.46401,
+						-2.13226
+					]
+				},
+				"lower4": {
+					"rotation": [
+						60,
+						0,
+						0
+					]
+				}
+			}
+		},
+		"animation.new_bonno.idle5": {
+			"loop": true,
+			"bones": {
+				"upperpart": {
+					"rotation": [
+						17.5,
+						-5,
+						-5
+					]
+				},
+				"feddyHed": {
+					"rotation": [
+						10,
+						0,
+						10
+					]
+				},
+				"jaw": {
+					"rotation": [
+						7.5,
+						0,
+						0
+					]
+				},
+				"armL": {
+					"rotation": [
+						-111.29202,
+						55.40642,
+						-91.66204
+					]
+				},
+				"lower2": {
+					"rotation": [
+						9.9495,
+						0.67114,
+						-40.49477
+					]
+				},
+				"fingers": {
+					"rotation": [
+						0,
+						0,
+						-17.5
+					]
+				},
+				"thumb": {
+					"rotation": [
+						0,
+						-7.5,
+						0
+					]
+				},
+				"armL2": {
+					"rotation": [
+						110.20352,
+						38.41501,
+						-113.76422
+					]
+				},
+				"lower7": {
+					"rotation": [
+						114.4146,
+						-183.41971,
+						-187.3142
+					]
+				},
+				"fingers5": {
+					"rotation": [
+						0,
+						0,
+						-32.5
+					]
+				},
+				"thumb3": {
+					"rotation": [
+						0,
+						32.5,
+						0
+					]
+				},
+				"upper6": {
+					"rotation": [
+						-10,
+						17.5,
+						0
+					]
+				},
+				"lower3": {
+					"rotation": [
+						42.5,
+						0,
+						0
+					]
+				},
+				"legR": {
+					"rotation": [
+						-71.28385,
+						-6.49316,
+						-9.7406
+					]
+				},
+				"feddy": {
+					"position": [
+						0,
+						-4,
+						0
+					]
+				},
+				"head": {
+					"rotation": [
+						-7.24721,
+						-1.93597,
+						-32.37739
+					]
+				},
+				"jaw3": {
+					"rotation": [
+						15,
+						0,
+						0
+					]
+				},
+				"legL": {
+					"rotation": [
+						35,
+						0,
+						0
+					]
+				},
+				"foot": {
+					"rotation": [
+						-57.5,
+						0,
+						0
+					]
+				},
+				"lower4": {
+					"rotation": [
+						75,
+						0,
+						0
+					]
+				},
+				"foot2": {
+					"rotation": [
+						0,
+						0,
+						10
+					]
+				}
+			}
+		},
+		"animation.new_bonno.idle6": {
+			"loop": true,
+			"bones": {
+				"upperpart": {
+					"rotation": [
+						0,
+						0,
+						-2.5
+					]
+				},
+				"jaw3": {
+					"rotation": [
+						7.5,
+						0,
+						0
+					]
+				},
+				"armL": {
+					"rotation": [
+						6.31116,
+						14.50692,
+						15.1454
+					]
+				},
+				"lower2": {
+					"rotation": [
+						-6.1191,
+						21.69365,
+						-16.17354
+					]
+				},
+				"fingers": {
+					"rotation": [
+						0,
+						0,
+						-10
+					]
+				},
+				"thumb": {
+					"rotation": [
+						0,
+						-25,
+						0
+					]
+				},
+				"armL2": {
+					"rotation": [
+						-140.52346,
+						36.64125,
+						138.7838
+					]
+				},
+				"lower7": {
+					"rotation": [
+						147.10087,
+						-167.32044,
+						-121.25773
+					]
+				},
+				"hand3": {
+					"rotation": [
+						-12.5,
+						0,
+						0
+					]
+				},
+				"legL": {
+					"rotation": [
+						0,
+						10,
+						0
+					]
+				},
+				"legR": {
+					"rotation": [
+						0,
+						-12.5,
+						0
+					]
+				},
+				"fingers5": {
+					"rotation": [
+						0,
+						0,
+						-97.5
+					]
+				}
+			}
+		}
+	}
+}

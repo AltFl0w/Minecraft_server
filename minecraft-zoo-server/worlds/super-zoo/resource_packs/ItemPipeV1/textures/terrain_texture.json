@@ -1,0 +1,14 @@
+{
+	"num_mip_levels": 4,
+	"padding": 8,
+	"resource_pack_name": "Item Pipe",
+	"texture_name": "atlas.terrain",
+	"texture_data": {
+			"um_item_pipe": {
+			"textures": "textures/blocks/item_pipe"
+		},
+			"um_chest_coupler": {
+			"textures": "textures/blocks/chest_coupler"
+		}
+	}
+}

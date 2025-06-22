@@ -1,0 +1,11 @@
+{
+	"resource_pack_name": "Security Cameras",
+	"texture_name": "atlas.items",
+	"texture_data": {
+		"bn_tablet": {
+			"textures": [
+				"textures/items/tablet"
+			]
+		}
+	}
+}

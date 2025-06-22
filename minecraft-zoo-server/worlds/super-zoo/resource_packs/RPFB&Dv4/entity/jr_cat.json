@@ -1,0 +1,53 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "fb:jr_cat",
+			"min_engine_version": "1.8.0",
+			"materials": {
+				"default": "enderman"
+			},
+			"textures": {
+				"default": "textures/entity/jr_cat"
+			},
+			"animations": {
+				"default_pose": "",
+				"no_pose": "",
+				"solemn_pose": "",
+				"athena_pose": "",
+				"brandish_pose": "",
+				"honor_pose": "",
+				"entertain_pose": "",
+				"salute_pose": "",
+				"riposte_pose": "",
+				"zombie_pose": "",
+				"cancan_a_pose": "",
+				"cancan_b_pose": "",
+				"hero_pose": "",
+				"wiggle": "",
+				"controller.pose": "controller.animation.armor_stand.pose",
+				"controller.wiggling": "controller.animation.armor_stand.wiggle"
+			},
+			"scripts": {
+				"initialize": [
+					"variable.armor_stand.pose_index = 0;",
+					"variable.armor_stand.hurt_time = 0;"
+				],
+				"animate": [
+					"controller.pose",
+					"controller.wiggling"
+				]
+			},
+			"geometry": {
+				"default": "geometry.new_jr_cat"
+			},
+			"render_controllers": [
+				"controller.render.armor_stand"
+			],
+			"enable_attachables": true,
+			"spawn_egg": {
+				"texture": "jr_cat_statue"
+			}
+		}
+	}
+}

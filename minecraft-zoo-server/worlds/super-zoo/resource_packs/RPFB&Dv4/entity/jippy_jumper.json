@@ -1,0 +1,53 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "fb:jippy_jumper",
+			"min_engine_version": "1.8.0",
+			"materials": {
+				"default": "enderman"
+			},
+			"textures": {
+				"default": "textures/entity/jippy_jumper"
+			},
+			"animations": {
+				"default_pose": "animation.bonnie_bunny.geo.CAM1Astare",
+				"no_pose": "animation.bonnie_bunny.geo.CAM1Astare",
+				"solemn_pose": "animation.new_bonnie_bunny.stage",
+				"athena_pose": "animation.springtrap.idle_2",
+				"brandish_pose": "animation.new_bonnie_bunny.CAM3",
+				"honor_pose": "animation.new_bonnie_bunny.CAM5",
+				"entertain_pose": "animation.new_bonnie_bunny.CAM2B",
+				"salute_pose": "animation.new_bonnie_bunny.CAM1B",
+				"riposte_pose": "animation.new_bonnie_bunny.leftdoor",
+				"zombie_pose": "animation.springtrap.idle_1",
+				"cancan_a_pose": "animation.bonnie_bunny.geo.CAM1Astare",
+				"cancan_b_pose": "animation.bonnie_bunny.geo.CAM1Astare",
+				"hero_pose": "animation.new_bonnie_bunny.stage",
+				"wiggle": "animation.springtrap.idle_2",
+				"controller.pose": "controller.animation.armor_stand.pose",
+				"controller.wiggling": "controller.animation.armor_stand.wiggle"
+			},
+			"scripts": {
+				"initialize": [
+					"variable.armor_stand.pose_index = 0;",
+					"variable.armor_stand.hurt_time = 0;"
+				],
+				"animate": [
+					"controller.pose",
+					"controller.wiggling"
+				]
+			},
+			"geometry": {
+				"default": "geometry.new_jippy_jumper"
+			},
+			"spawn_egg": {
+				"texture": "jippy_jumper_statue"
+			},
+			"render_controllers": [
+				"controller.render.armor_stand"
+			],
+			"enable_attachables": false
+		}
+	}
+}

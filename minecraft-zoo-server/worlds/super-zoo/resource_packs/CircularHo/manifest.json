@@ -1,0 +1,29 @@
+{
+  "format_version": 2,
+  "header": {
+    "name": "Circular Hotbar",
+    "description": "Bedrock Version Made by @Andromedarius",
+    "uuid": "d157902e-f509-4f59-b108-6cfc2f9df291",
+    "version": [1, 0, 3],
+    "min_engine_version": [1, 13, 0]
+  },
+  "modules": [
+    {
+      "type": "resources",
+      "uuid": "ec6d9aef-718e-416e-b463-1771bd30a526",
+      "version": [1, 0, 0]
+    }
+  ],
+  "subpacks": [
+    {
+      "folder_name": "lite",
+      "name": "Lite",
+      "memory_tier": 1
+    },
+    {
+      "folder_name": "default",
+      "name": "Classic",
+      "memory_tier": 2
+    }
+  ]
+}

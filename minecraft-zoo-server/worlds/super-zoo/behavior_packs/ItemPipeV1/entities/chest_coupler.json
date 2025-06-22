@@ -1,0 +1,41 @@
+{ 
+	"format_version": "1.20.80",
+	"minecraft:entity": {
+		"description": { 
+			"identifier": "um:chest_coupler",
+			"is_spawnable": true,
+			"is_summonable": true,
+			"is_experimental": false
+		},
+		"components": {
+			"minecraft:damage_sensor": {
+				"triggers": {
+					"deals_damage": false
+				}
+			},
+				"minecraft:physics": {
+				"has_collision": false,
+				"has_gravity": false
+			},
+			                        "minecraft:inventory": {
+                "container_type": "container",
+
+                "inventory_size": 4
+            },
+			"minecraft:collision_box": {
+	"width": 0.4,
+	"height": 0.4
+},
+		"minecraft:despawn": {
+				"filters": [
+							{
+							"subject": "self",
+							"operator": "!=",
+							"test": "in_block",
+							"value": "um:chest_coupler"
+						}
+					]
+			}
+		}
+	}
+}

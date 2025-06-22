@@ -1,0 +1,53 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "fb:unwithered_freddy",
+			"min_engine_version": "1.8.0",
+			"materials": {
+				"default": "enderman"
+			},
+			"textures": {
+				"default": "textures/entity/unwithered/unwithered_freddy"
+			},
+			"animations": {
+				"default_pose": "animation.unwithered_bonnie.idle",
+				"no_pose": "animation.unwithered_bonnie.idle",
+				"solemn_pose": "animation.unwithered_bonnie.idle",
+				"athena_pose": "animation.unwithered_bonnie.idle",
+				"brandish_pose": "animation.unwithered_bonnie.idle",
+				"honor_pose": "animation.unwithered_bonnie.idle",
+				"entertain_pose": "animation.unwithered_bonnie.idle",
+				"salute_pose": "animation.unwithered_bonnie.idle",
+				"riposte_pose": "animation.unwithered_bonnie.idle",
+				"zombie_pose": "animation.unwithered_bonnie.idle",
+				"cancan_a_pose": "animation.unwithered_bonnie.idle",
+				"cancan_b_pose": "animation.unwithered_bonnie.idle",
+				"hero_pose": "animation.unwithered_bonnie.idle",
+				"wiggle": "animation.unwithered_bonnie.idle",
+				"controller.pose": "controller.animation.armor_stand.pose",
+				"controller.wiggling": "controller.animation.armor_stand.wiggle"
+			},
+			"scripts": {
+				"initialize": [
+					"variable.armor_stand.pose_index = 0;",
+					"variable.armor_stand.hurt_time = 0;"
+				],
+				"animate": [
+					"controller.pose",
+					"controller.wiggling"
+				]
+			},
+			"geometry": {
+				"default": "geometry.unwithered_freddy"
+			},
+			"render_controllers": [
+				"controller.render.armor_stand"
+			],
+			"enable_attachables": true,
+			"spawn_egg": {
+				"texture": "w_freddy"
+			}
+		}
+	}
+}

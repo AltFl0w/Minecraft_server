@@ -1,0 +1,15 @@
+{
+  "um:storge": {
+    "textures": {
+      "up": "um_storge_up",
+      "down": "um_storge_down",
+      "side": "um_storge_side"
+    },
+    "sound": "stone"
+  },
+  "format_version": [
+    1,
+    1,
+    0
+  ]
+}

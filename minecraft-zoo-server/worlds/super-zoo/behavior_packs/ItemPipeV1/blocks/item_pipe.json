@@ -1,0 +1,96 @@
+{
+	"format_version": "1.21.70",
+	"minecraft:block": {
+		"description": {
+			"identifier": "um:item_pipe",
+				"menu_category": {
+				"category": "construction"
+			},
+			"states": {
+				"um:top": [
+					false,
+					true
+				],
+				"um:bottom": [
+					false,
+					true
+				],
+				"um:east": [
+					false,
+					true
+				],
+				"um:west": [
+					false,
+					true
+				],
+				"um:north": [
+					false,
+					true
+				],
+				"um:south": [
+					false,
+					true
+				],
+				"um:center": [
+					false,
+					true
+				]
+			}
+		},
+		"components": {
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "um_item_pipe",
+					"render_method": "alpha_test"
+				}
+			},
+		"minecraft:display_name": "Item Pipe",
+			"minecraft:custom_components": [ 
+			       "um:item_pipe"
+			],
+			"minecraft:tick": {
+	"interval_range": [
+		1,
+		1
+	]
+},
+
+      "minecraft:collision_box": {
+        "origin": [
+          -3.0,
+          5.0,
+          -3.0
+        ],
+        "size": [
+          6.0,
+          6.0,
+          6.0
+        ]
+      },
+            "minecraft:selection_box": {
+        "origin": [
+          -3.0,
+          5.0,
+          -3.0
+        ],
+        "size": [
+          6.0,
+          6.0,
+          6.0
+        ]
+      },
+			"minecraft:geometry": {
+				"identifier": "geometry.item_pipe",
+				"bone_visibility": {
+					"middle": true,
+						"top": "query.block_state('um:top') == true",
+					"bottom": "query.block_state('um:bottom') == true",
+					"east": "query.block_state('um:east') == true",
+					"west": "query.block_state('um:west') == true",
+					"north": "query.block_state('um:north') == true",
+					"south": "query.block_state('um:south') == true"
+				}
+			}
+		}
+	}
+}

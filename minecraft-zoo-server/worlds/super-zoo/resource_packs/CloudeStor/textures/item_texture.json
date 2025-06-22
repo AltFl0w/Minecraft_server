@@ -1,0 +1,10 @@
+{
+	"texture_data": {
+		"cloude_storage_remont": {
+			"textures": "textures/items/cloude_storage_remont.png"
+		},
+			"storageconnector": {
+			"textures": "textures/items/storageconnector.png"
+		}
+	}
+}

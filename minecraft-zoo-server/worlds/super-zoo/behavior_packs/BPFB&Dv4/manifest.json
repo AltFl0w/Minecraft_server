@@ -1,0 +1,41 @@
+{
+	"format_version": 2,
+	"header": {
+		"name": "BP | FB&D v4.13.0",
+		"description": "Have you ever wanted to replicate a restaurant from FNAF but in Minecraft?",
+		"min_engine_version": [
+			1,
+			21,
+			70
+		],
+		"uuid": "e716b5ce-da3d-4076-8367-27da7d4cb55c",
+		"version": "4.13.0"
+	},
+	"modules": [
+		{
+			"type": "data",
+			"uuid": "e8508004-929b-45d3-8e88-efe49830e106",
+			"version": "4.13.0"
+		},
+		{
+			"type": "script",
+			"language": "javascript",
+			"uuid": "322cef0e-cca1-427a-91af-ca7bfa460eba",
+			"entry": "scripts/fd_main.js",
+			"version": "4.13.0"
+		}
+	],
+	"capabilities": [
+		"script_eval"
+	],
+	"dependencies": [
+		{
+			"module_name": "@minecraft/server",
+			"version": "2.0.0-beta"
+		},
+		{
+			"uuid": "d8c54070-fd11-4cab-9081-b7383cb145e2",
+			"version": "4.13.0"
+		}
+	]
+}

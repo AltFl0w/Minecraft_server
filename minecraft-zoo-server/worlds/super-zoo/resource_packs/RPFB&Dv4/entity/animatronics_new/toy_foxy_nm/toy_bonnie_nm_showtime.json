@@ -1,0 +1,33 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "fb:showtime_toy_foxy_nm",
+			"materials": {
+				"default": "enderman"
+			},
+			"textures": {
+				"default": "textures/entity/fnaf2/toy_foxy"
+			},
+			"geometry": {
+				"default": "geometry.new_toy_foxy"
+			},
+			"animations": {
+				"showtime": "animation.new_toy_foxy.showtime",
+				"showtime_off": "animation.new_toy_foxy.test_idle_2",
+				"showtime_ex": "controller.animation.fb_animatronics.showtime"
+			},
+			"scripts": {
+				"animate": [
+					"showtime_ex"
+				]
+			},
+			"render_controllers": [
+				"controller.render.nothing"
+			],
+			"spawn_egg": {
+				"texture": "toy_foxy_showtime"
+			}
+		}
+	}
+}

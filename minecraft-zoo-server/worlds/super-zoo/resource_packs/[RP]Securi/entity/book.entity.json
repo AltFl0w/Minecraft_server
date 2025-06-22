@@ -1,0 +1,35 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "bn:book",
+			"materials": {
+				"default": "entity_emissive_alpha"
+			},
+			"textures": {
+				"page_0": "textures/entity/book/page_1",
+				"page_1": "textures/entity/book/page_2",
+				"page_2": "textures/entity/book/page_3",
+				"page_3": "textures/entity/book/page_4",
+				"page_4": "textures/entity/book/page_5"
+			},
+			"geometry": {
+				"default": "geometry.book"
+			},
+			"render_controllers": [
+				"controller.render.book_menu"
+			],
+			"spawn_egg": {
+				"texture": "book_enchanted"
+			},
+			"scripts": {
+				"animate": [
+					"move"
+				]
+			},
+			"animations": {
+				"move": "animation.book.billboard"
+			}
+		}
+	}
+}

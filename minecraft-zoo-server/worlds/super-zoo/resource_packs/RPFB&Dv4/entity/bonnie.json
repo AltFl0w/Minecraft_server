@@ -1,0 +1,58 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "fb:bonnie",
+			"min_engine_version": "1.8.0",
+			"materials": {
+				"default": "spider"
+			},
+			"textures": {
+				"default": "textures/entity/fnaf1/bonnie",
+				"blue": "textures/entity/fnaf1/bonnie_hw",
+				"red": "textures/entity/fnaf1/bonnie_possed",
+				"purple": "textures/entity/fnaf1/bonnie_movie",
+				"var1": "textures/entity/fnaf1/vars/glamrock_bonnie",
+				"var2": "textures/entity/fnaf1/vars/bonnie_battington"
+			},
+			"animations": {
+				"default_pose": "animation.new_bonnie_bunny.stage",
+				"no_pose": "animation.bonnie_bunny.geo.CAM1A",
+				"solemn_pose": "animation.bonnie_bunny.geo.CAM1Astare",
+				"athena_pose": "animation.new_bonnie_bunny.CAM1B",
+				"brandish_pose": "animation.new_bonnie_bunny.CAM2B",
+				"honor_pose": "animation.new_bonnie_bunny.CAM5",
+				"entertain_pose": "animation.new_bonnie_bunny.CAM3",
+				"salute_pose": "animation.new_bonnie_bunny.CAM2Btwitch",
+				"riposte_pose": "animation.new_bonnie_bunny.leftdoor",
+				"zombie_pose": "animation.new_bonnie_bunny.stage",
+				"cancan_a_pose": "animation.bonnie_bunny.geo.CAM1A",
+				"cancan_b_pose": "animation.bonnie_bunny.geo.CAM1Astare",
+				"hero_pose": "animation.new_bonnie_bunny.CAM1B",
+				"wiggle": "animation.new_bonnie_bunny.CAM2B",
+				"controller.pose": "controller.animation.armor_stand.pose",
+				"controller.wiggling": "controller.animation.armor_stand.wiggle"
+			},
+			"scripts": {
+				"initialize": [
+					"variable.armor_stand.pose_index = 0;",
+					"variable.armor_stand.hurt_time = 0;"
+				],
+				"animate": [
+					"controller.pose",
+					"controller.wiggling"
+				]
+			},
+			"geometry": {
+				"default": "geometry.new_bonnie_bunny"
+			},
+			"render_controllers": [
+				"controller.render.bonnie"
+			],
+			"enable_attachables": true,
+			"spawn_egg": {
+				"texture": "bonnie_icon_normal"
+			}
+		}
+	}
+}

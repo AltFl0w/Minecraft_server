@@ -1,0 +1,65 @@
+{
+	"format_version": 2,
+	"header": {
+		"name": "[BP] Security Cameras v3.1",
+		"description": "By: BONY162 <-YouTube",
+		"min_engine_version": [
+			1,
+			21,
+			0
+		],
+		"uuid": "81b38b27-6bc6-478b-af26-b96cab229cbc",
+		"version": [
+			3,
+			0,
+			1
+		]
+	},
+	"modules": [
+		{
+			"type": "data",
+			"uuid": "4be38d30-0c97-46d1-bc6a-9214edbcb450",
+			"version": [
+				1,
+				0,
+				0
+			]
+		},
+		{
+			"type": "script",
+			"language": "javascript",
+			"uuid": "5e7e0195-f070-45c9-aacf-f0d66e0d7e58",
+			"entry": "scripts/main.js",
+			"version": [
+				1,
+				0,
+				0
+			]
+		}
+	],
+	"dependencies": [
+		{
+			"uuid": "a8a900da-a6d7-4a96-a26b-967e8112349b",
+			"version": [
+				3,
+				0,
+				1 
+			]
+		},
+		{
+			"module_name": "@minecraft/server",
+			"version": "1.11.0"
+		},
+		{
+			"module_name": "@minecraft/server-ui",
+			"version": "1.1.0"
+		}
+	],
+	"metadata": {
+		"generated_with": {
+			"bridge": [
+				"1.8.4"
+			]
+		}
+	}
+}

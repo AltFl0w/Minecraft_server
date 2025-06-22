@@ -1,0 +1,24 @@
+{ 
+  "format_version": "1.20.50",
+  "minecraft:block": {
+    "description": {
+      "identifier": "um:storge",
+      "menu_category": {
+        "category": "construction"
+      }
+    },
+    "components": {
+    "minecraft:destructible_by_mining": {
+    "seconds_to_destroy": 100
+   },
+      "minecraft:material_instances": {
+        "*": {
+          "texture": "um:storge
+          ",
+          "render_method": "blend"
+        }
+      },
+      	"minecraft:display_name": "Storage Controller"
+    }
+  }
+}

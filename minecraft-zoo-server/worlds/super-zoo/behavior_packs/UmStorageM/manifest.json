@@ -1,0 +1,54 @@
+{
+	"format_version": 2,
+	"header": {
+		"name": "Um Storage Mcpe BP 2.0.1",
+		"description": "Unknown Mcpe YT",
+		"min_engine_version": [
+			1,
+			21,
+			50
+		],
+		"uuid": "5bc601a6-cb6f-11ef-9cd2-0242ac120111",
+		"version": [
+			2,
+			0,
+			1
+		]
+	},
+	"modules": [
+		{
+			"type": "data",
+			"uuid": "65456f64-cb6f-11ef-9cd2-0242ac120002",
+			"version": [
+				1,
+				0,
+				0
+			]
+		},
+		{
+			"type": "script",
+			"language": "javascript",
+			"uuid": "6f4e8fea-cb6f-11ef-9cd2-0242ac120002",
+			"entry": "scripts/main.js",
+			"version": [
+				1,
+				0,
+				0
+			]
+		}
+	],
+	"dependencies": [
+  {
+    "uuid": "dd302710-e8d0-44b4-82ff-96da6bbc2111", 
+    "version": [1, 0, 0]
+  },
+  {
+    "module_name": "@minecraft/server",
+    "version": "1.11.0"
+  },
+  {
+    "module_name": "@minecraft/server-ui",
+    "version": "1.1.0"
+  }
+]
+}

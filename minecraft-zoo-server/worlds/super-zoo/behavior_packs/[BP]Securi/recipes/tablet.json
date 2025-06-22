@@ -1,0 +1,33 @@
+{
+	"format_version": "1.12",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "bn:tablet"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"key": {
+			"I": {
+				"item": "minecraft:iron_ingot"
+			},
+			"R": {
+				"item": "minecraft:redstone"
+			},
+			"G": {
+				"item": "minecraft:glass_pane"
+			},
+			"B": {
+				"item": "minecraft:book"
+			}
+		},
+		"pattern": [
+			"IGI",
+			"RBR",
+			"IRI"
+		],
+		"result": {
+			"item": "bn:tablet"
+		}
+	}
+}

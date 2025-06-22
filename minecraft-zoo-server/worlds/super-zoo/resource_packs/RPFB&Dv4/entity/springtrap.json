@@ -1,0 +1,54 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "fb:springtrap",
+			"min_engine_version": "1.8.0",
+			"materials": {
+				"default": "enderman"
+			},
+			"textures": {
+				"default": "textures/entity/fnaf3/springtrap",
+				"blue": "textures/entity/fnaf3/springtrap"
+			},
+			"spawn_egg": {
+				"texture": "springtrap_statue"
+			},
+			"animations": {
+				"default_pose": "animation.springtrap.idle_1",
+				"no_pose": "animation.bonnie_bunny.geo.CAM1A",
+				"solemn_pose": "animation.bonnie_bunny.geo.CAM1Astare",
+				"athena_pose": "animation.new_bonnie_bunny.CAM1B",
+				"brandish_pose": "animation.springtrap.idle_2",
+				"honor_pose": "animation.new_bonnie_bunny.CAM5",
+				"entertain_pose": "animation.new_bonnie_bunny.CAM3",
+				"salute_pose": "animation.springtrap.idle_1",
+				"riposte_pose": "animation.new_bonnie_bunny.leftdoor",
+				"zombie_pose": "animation.new_bonnie_bunny.stage",
+				"cancan_a_pose": "animation.bonnie_bunny.geo.CAM1A",
+				"cancan_b_pose": "animation.bonnie_bunny.geo.CAM1Astare",
+				"hero_pose": "animation.new_bonnie_bunny.CAM1B",
+				"wiggle": "animation.springtrap.idle_2",
+				"controller.pose": "controller.animation.armor_stand.pose",
+				"controller.wiggling": "controller.animation.armor_stand.wiggle"
+			},
+			"scripts": {
+				"initialize": [
+					"variable.armor_stand.pose_index = 0;",
+					"variable.armor_stand.hurt_time = 0;"
+				],
+				"animate": [
+					"controller.pose",
+					"controller.wiggling"
+				]
+			},
+			"geometry": {
+				"default": "geometry.new_springtrap"
+			},
+			"render_controllers": [
+				"controller.render.fredbear"
+			],
+			"enable_attachables": true
+		}
+	}
+}

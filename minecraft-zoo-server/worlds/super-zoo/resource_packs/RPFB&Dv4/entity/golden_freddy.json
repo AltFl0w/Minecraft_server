@@ -1,0 +1,54 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "fb:golden_freddy",
+			"min_engine_version": "1.8.0",
+			"materials": {
+				"default": "enderman"
+			},
+			"textures": {
+				"default": "textures/entity/fnaf1/golden_freddy",
+				"blue": "textures/entity/fnaf1/golden_freddy_black"
+			},
+			"animations": {
+				"default_pose": "animation.goldfeddy.geo.sit",
+				"no_pose": "animation.goldfeddy.geo.sit",
+				"solemn_pose": "animation.goldfeddy.geo.sit",
+				"athena_pose": "animation.goldfeddy.geo.sit",
+				"brandish_pose": "animation.goldfeddy.geo.sit",
+				"honor_pose": "animation.goldfeddy.geo.sit",
+				"entertain_pose": "animation.goldfeddy.geo.sit",
+				"salute_pose": "animation.goldfeddy.geo.sit",
+				"riposte_pose": "animation.goldfeddy.geo.sit",
+				"zombie_pose": "animation.goldfeddy.geo.sit",
+				"cancan_a_pose": "animation.goldfeddy.geo.sit",
+				"cancan_b_pose": "animation.goldfeddy.geo.sit",
+				"hero_pose": "animation.goldfeddy.geo.sit",
+				"wiggle": "animation.goldfeddy.geo.sit",
+				"controller.pose": "controller.animation.armor_stand.pose",
+				"controller.wiggling": "controller.animation.armor_stand.wiggle"
+			},
+			"scripts": {
+				"initialize": [
+					"variable.armor_stand.pose_index = 0;",
+					"variable.armor_stand.hurt_time = 0;"
+				],
+				"animate": [
+					"controller.pose",
+					"controller.wiggling"
+				]
+			},
+			"geometry": {
+				"default": "geometry.new_golden_feddy.geo"
+			},
+			"render_controllers": [
+				"controller.render.fredbear"
+			],
+			"enable_attachables": true,
+			"spawn_egg": {
+				"texture": "golden_freddy_icon_normal"
+			}
+		}
+	}
+}

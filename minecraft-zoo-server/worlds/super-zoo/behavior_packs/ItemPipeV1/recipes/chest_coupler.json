@@ -1,0 +1,29 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "um:chest_coupler"
+    },
+    "tags": ["crafting_table"],
+    "pattern": [
+      "IHI",
+      "IRI",
+      "IHI"
+    ],
+    "key": {
+      "I": {
+        "item": "minecraft:iron_ingot"
+      },
+      "H": {
+        "item": "minecraft:hopper"
+      },
+      "R": {
+        "item": "minecraft:redstone"
+      }
+    },
+    "result": {
+      "item": "um:chest_coupler",
+      "count": 1
+    }
+  }
+}

@@ -1,0 +1,57 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "fb:spring_bonnie",
+			"min_engine_version": "1.8.0",
+			"materials": {
+				"default": "enderman"
+			},
+			"textures": {
+				"default": "textures/entity/fnaf1/springbonnie",
+				"blue": "textures/entity/fnaf1/vars/tv_springbonnie",
+				"red": "textures/entity/fnaf1/vars/insane_bonnie_fn4",
+				"purple": "textures/entity/fnaf1/vars/SilverEyesYellowBonnie",
+				"orange": "textures/entity/fnaf1/vars/springbonnief"
+			},
+			"spawn_egg": {
+				"texture": "springbonnie_statue"
+			},
+			"animations": {
+				"default_pose": "animation.new_bonnie_bunny.stage",
+				"no_pose": "animation.bonnie_bunny.geo.CAM1A",
+				"solemn_pose": "animation.bonnie_bunny.geo.CAM1Astare",
+				"athena_pose": "animation.new_bonnie_bunny.CAM1B",
+				"brandish_pose": "animation.new_bonnie_bunny.CAM2B",
+				"honor_pose": "animation.new_bonnie_bunny.CAM5",
+				"entertain_pose": "animation.new_bonnie_bunny.CAM3",
+				"salute_pose": "animation.new_bonnie_bunny.CAM2B",
+				"riposte_pose": "animation.new_bonnie_bunny.leftdoor",
+				"zombie_pose": "animation.new_bonnie_bunny.stage",
+				"cancan_a_pose": "animation.bonnie_bunny.geo.CAM1A",
+				"cancan_b_pose": "animation.bonnie_bunny.geo.CAM1Astare",
+				"hero_pose": "animation.new_bonnie_bunny.CAM1B",
+				"wiggle": "animation.new_bonnie_bunny.CAM2B",
+				"controller.pose": "controller.animation.armor_stand.pose",
+				"controller.wiggling": "controller.animation.armor_stand.wiggle"
+			},
+			"scripts": {
+				"initialize": [
+					"variable.armor_stand.pose_index = 0;",
+					"variable.armor_stand.hurt_time = 0;"
+				],
+				"animate": [
+					"controller.pose",
+					"controller.wiggling"
+				]
+			},
+			"geometry": {
+				"default": "geometry.spring_bonnie"
+			},
+			"render_controllers": [
+				"controller.render.five_variants"
+			],
+			"enable_attachables": true
+		}
+	}
+}
