@@ -3,37 +3,44 @@
 ## 📋 Prerequisites
 - Coolify server running on Linux
 - Access to Coolify web interface
-- Ports 19134-19135 available on your server
-- [Project structure reference](./minecraft-zoo-addon/README.md)
+- GitHub repository with your Minecraft Zoo server code
+- Port 19132 available on your server
+- Docker and Docker Compose support in Coolify
 
-## 🎯 Step-by-Step Deployment
+## 🎯 Step-by-Step Deployment (GitHub/Git-based)
 
-### Step 1: Create New Service in Coolify
+### Step 1: Create New Application in Coolify
 
 1. **Log into your Coolify dashboard**
 2. **Navigate to your project**
-3. **Click "New Resource" → "Service"**
-4. **Choose "Docker Compose"**
+3. **Click "New Resource" → "Application"**
+4. **Choose your Git provider (e.g., GitHub)**
+5. **Select your repository** (public or private)
+6. **Choose the branch to deploy** (usually `main` or `master`)
 
-### Step 2: Configure the Service
+### Step 2: Configure the Application
 
-1. **Service Name**: `minecraft-zoo-server`
-2. **Description**: `Clean Minecraft Bedrock server for Zoo addon`
-3. **Copy the contents** of `minecraft-zoo-server/coolify-zoo-server.yml` into the Docker Compose field
+1. **Application Name**: `minecraft-zoo-server`
+2. **Description**: `Minecraft Bedrock server with Zoo addon`
+3. **Docker Compose**: Use the main `docker-compose.yml` file in the repository
+4. **Environment Variables**:
+   Set these in Coolify for production:
+   ```
+   SERVER_NAME=Production Zoo Server
+   MAX_PLAYERS=20
+   GAMEMODE=creative
+   DIFFICULTY=peaceful
+   ONLINE_MODE=true
+   RCON_PASSWORD=your-secure-password-here
+   LEVEL_NAME=super-zoo
+   ```
 
-### Step 3: Environment Variables (Optional)
-Add these if you want to customize:
-```
-SERVER_NAME=Your Zoo Name
-MAX_PLAYERS=20
-GAMEMODE=creative
-DIFFICULTY=peaceful
-```
+### Step 3: Port Configuration
+- **19132/udp** → Minecraft Bedrock server port
+- **25575/tcp** → RCON port (for remote administration)
 
-### Step 4: Port Configuration
-- **19134/udp** → Minecraft Bedrock IPv4
-- **19135/udp** → Minecraft Bedrock IPv6
-- **8080** → (Optional) AI service port for future use
+### Step 4: Enable Auto-Deploy
+- **Enable auto-deploy on push** so Coolify redeploys your server every time you push a new commit to the selected branch.
 
 ### Step 5: Deploy
 1. **Click "Deploy"**
@@ -45,7 +52,7 @@ DIFFICULTY=peaceful
 ### From Minecraft Bedrock:
 1. **Add Server**
 2. **Server Address**: `your-server-ip`
-3. **Port**: `19134`
+3. **Port**: `19132`
 4. **Server Name**: `Zoo Server`
 
 ### From Nintendo Switch/iPad:
@@ -64,6 +71,11 @@ DIFFICULTY=peaceful
      npm run package
      ```
   3. This will update the compiled files and the `zoo-addon.mcpack` package.
+
+### Deploying Addon Updates
+- **Commit and push your changes to GitHub.**
+- **Coolify will automatically redeploy the server with the latest code.**
+- If you use Docker volumes for packs, you may still need to copy files as described below.
 
 ### Option 1: Volume Mount (Recommended)
 1. **Copy addon files** to server volumes:
@@ -88,7 +100,7 @@ DIFFICULTY=peaceful
 ### Can't Connect
 - Check firewall settings
 - Verify port forwarding
-- Test with `telnet your-server-ip 19134`
+- Test with `telnet your-server-ip 19132`
 
 ### Addon Not Loading
 - Check behavior_packs and resource_packs directories

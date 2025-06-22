@@ -6,11 +6,14 @@ echo "=========================="
 # Function to build TypeScript
 build_addon() {
     echo "📦 Building TypeScript..."
+    cd minecraft-zoo-addon
     npm run build
     if [ $? -eq 0 ]; then
         echo "✅ Build successful!"
+        cd ..
     else
         echo "❌ Build failed!"
+        cd ..
         exit 1
     fi
 }
@@ -18,7 +21,7 @@ build_addon() {
 # Function to start test server
 start_server() {
     echo "🚀 Starting test server..."
-    docker compose -f docker-compose.local-test.yml up -d
+    docker compose up -d
     echo "⏳ Waiting for server to start..."
     sleep 10
     echo "✅ Server should be running on localhost:19132"
@@ -27,7 +30,7 @@ start_server() {
 # Function to restart server (for hot reload)
 restart_server() {
     echo "🔄 Restarting server for hot reload..."
-    docker compose -f docker-compose.local-test.yml restart minecraft-zoo-test
+    docker compose restart minecraft-zoo
     echo "⏳ Waiting for restart..."
     sleep 5
     echo "✅ Server restarted!"
@@ -36,13 +39,27 @@ restart_server() {
 # Function to show logs
 show_logs() {
     echo "📋 Server logs:"
-    docker compose -f docker-compose.local-test.yml logs -f minecraft-zoo-test
+    docker compose logs -f minecraft-zoo
+}
+
+# Function to run GameTests
+run_tests() {
+    echo "🧪 Running GameTests..."
+    echo "Connect to the server and run these commands:"
+    echo ""
+    echo "In-game GameTest commands:"
+    echo "  /gametest runset ZooTests"
+    echo "  /gametest run ZooTests:addon_loads"
+    echo "  /gametest run ZooTests:full_integration"
+    echo ""
+    echo "Or use RCON (if available):"
+    docker compose exec minecraft-zoo rcon-cli "/gametest runset ZooTests" 2>/dev/null || echo "⚠️  RCON not available - run commands in-game"
 }
 
 # Function to stop server
 stop_server() {
     echo "🛑 Stopping test server..."
-    docker compose -f docker-compose.local-test.yml down
+    docker compose down
     echo "✅ Server stopped!"
 }
 
@@ -62,6 +79,9 @@ case "$1" in
     "logs")
         show_logs
         ;;
+    "test")
+        run_tests
+        ;;
     "stop")
         stop_server
         ;;
@@ -76,13 +96,14 @@ case "$1" in
         echo "🛑 Stop server: ./test-addon.sh stop"
         ;;
     *)
-        echo "Usage: $0 {build|start|restart|logs|stop|dev}"
+        echo "Usage: $0 {build|start|restart|logs|test|stop|dev}"
         echo ""
         echo "Commands:"
         echo "  build   - Build TypeScript only"
         echo "  start   - Build and start test server"
         echo "  restart - Build and restart server (hot reload)"
         echo "  logs    - Show server logs"
+        echo "  test    - Show GameTest commands to run"
         echo "  stop    - Stop test server"
         echo "  dev     - Start development mode"
         ;;

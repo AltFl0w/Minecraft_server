@@ -1,0 +1,13 @@
+# This is a placeholder for the actual .mcstructure file
+# In a real implementation, this would be a binary structure file created in Minecraft
+# using structure blocks, but for now we'll create a minimal setup.
+#
+# To create proper test structures:
+# 1. In Minecraft, use /give @s structure_block
+# 2. Place the structure block
+# 3. Set it to "Save" mode
+# 4. Define a 3x3x3 empty area
+# 5. Name it "zoo:empty_test"
+# 6. Save the structure
+#
+# This creates the .mcstructure file that GameTests will use as a test environment. 

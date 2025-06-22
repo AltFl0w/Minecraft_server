@@ -3,6 +3,7 @@ import { PermissionManager } from './systems/PermissionManager';
 import { AICaretakerManager } from './systems/AICaretakerManager';
 import { ConfigManager } from './systems/ConfigManager';
 import { CommandHandler } from './systems/CommandHandler';
+import { initializeLogBasedTests } from './tests/LogBasedTests';
 console.log('Zoo Addon initializing...');
 // Initialize systems
 const permissionManager = new PermissionManager();
@@ -80,3 +81,5 @@ system.runInterval(() => {
     }
 }, 20);
 console.log('Zoo Addon loaded successfully!');
+// Initialize log-based testing system
+initializeLogBasedTests();
