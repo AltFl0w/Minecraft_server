@@ -9,11 +9,8 @@ services:
       - "${MINECRAFT_PORT:-19132}:19132/udp"  # Bedrock port (configurable)
       - "${RCON_PORT:-25575}:25575/tcp"       # RCON port (configurable)
     volumes:
-      # Use test-data directory structure (works for both local and production)
-      - ./test-data:/data
-      # Mount addon packs (these override the copies in test-data)
-      - ./minecraft-zoo-addon/packs/behavior_pack:/data/behavior_packs/zoo-addon-bp
-      - ./minecraft-zoo-addon/packs/resource_pack:/data/resource_packs/zoo-addon-rp
+      # Use minecraft-zoo-server directory (contains the actual zoo world)
+      - ./minecraft-zoo-server:/data
     environment:
       # Core server settings
       - EULA=TRUE
@@ -22,7 +19,7 @@ services:
       - DIFFICULTY=${DIFFICULTY:-peaceful}
       - ALLOW_CHEATS=${ALLOW_CHEATS:-true}
       - MAX_PLAYERS=${MAX_PLAYERS:-10}
-      - LEVEL_NAME=${LEVEL_NAME:-zoo-world}
+      - LEVEL_NAME=${LEVEL_NAME:-super-zoo}
       
       # Network settings
       - ENABLE_LAN_VISIBILITY=${ENABLE_LAN_VISIBILITY:-true}
