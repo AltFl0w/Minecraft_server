@@ -14,9 +14,9 @@ services:
     volumes:
       # Use minecraft-zoo-server directory (contains the real super-zoo world)
       - ./minecraft-zoo-server:/data
-      # Mount addon packs so they're available
-      - ./minecraft-zoo-addon/packs/behavior_pack:/data/behavior_packs/zoo-addon-bp
-      - ./minecraft-zoo-addon/packs/resource_pack:/data/resource_packs/zoo-addon-rp
+      # Mount the world's behavior and resource packs to server global directories
+      - ./minecraft-zoo-server/worlds/super-zoo/behavior_packs:/data/behavior_packs
+      - ./minecraft-zoo-server/worlds/super-zoo/resource_packs:/data/resource_packs
     environment:
       # Core server settings
       - EULA=TRUE

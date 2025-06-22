@@ -11,9 +11,9 @@ services:
     volumes:
       # Use minecraft-zoo-server directory (contains the real super-zoo world)
       - ./minecraft-zoo-server:/data
-      # Mount addon packs so they're available
-      - ./minecraft-zoo-addon/packs/behavior_pack:/data/behavior_packs/zoo-addon-bp
-      - ./minecraft-zoo-addon/packs/resource_pack:/data/resource_packs/zoo-addon-rp
+      # Mount the world's behavior and resource packs to server global directories
+      - ./minecraft-zoo-server/worlds/super-zoo/behavior_packs:/data/behavior_packs
+      - ./minecraft-zoo-server/worlds/super-zoo/resource_packs:/data/resource_packs
     environment:
       # Core server settings
       - EULA=TRUE
@@ -22,7 +22,7 @@ services:
       - DIFFICULTY=${DIFFICULTY:-peaceful}
       - ALLOW_CHEATS=${ALLOW_CHEATS:-true}
       - MAX_PLAYERS=${MAX_PLAYERS:-10}
-      - LEVEL_NAME=${LEVEL_NAME:-super-zoo}
+      - LEVEL_NAME=super-zoo
       
       # Network settings
       - ENABLE_LAN_VISIBILITY=${ENABLE_LAN_VISIBILITY:-true}
@@ -36,8 +36,8 @@ services:
       - EXPERIMENTS=${EXPERIMENTS:-data_driven_items,upcoming_creator_features,beta_apis,cameras}
       
       # Performance settings
-      - VIEW_DISTANCE=${VIEW_DISTANCE:-10}
-      - TICK_DISTANCE=${TICK_DISTANCE:-4}
+      - VIEW_DISTANCE=${VIEW_DISTANCE:-12}
+      - TICK_DISTANCE=${TICK_DISTANCE:-6}
       
       # Timezone
       - TZ=${TZ:-America/New_York}
