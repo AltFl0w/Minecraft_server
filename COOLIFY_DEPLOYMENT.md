@@ -34,6 +34,8 @@
    RCON_PASSWORD=your-secure-password-here
    LEVEL_NAME=super-zoo
    ```
+   
+   **CRITICAL**: Ensure the volume mount uses `./minecraft-zoo-server:/data` (NOT `./test-data:/data`)
 
 ### Step 3: Port Configuration
 - **19132/udp** → Minecraft Bedrock server port

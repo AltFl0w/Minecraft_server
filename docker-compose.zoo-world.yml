@@ -1,7 +1,10 @@
+# Production Docker Compose for Zoo World Server
+# This configuration uses the real "super-zoo" world with all animals and content
+
 services:
   minecraft-zoo:
     image: itzg/minecraft-bedrock-server:latest
-    container_name: minecraft-zoo-server
+    container_name: super-zoo-server
     restart: unless-stopped
     stdin_open: true
     tty: true
@@ -17,12 +20,12 @@ services:
     environment:
       # Core server settings
       - EULA=TRUE
-      - SERVER_NAME=${SERVER_NAME:-Minecraft Zoo Server}
+      - SERVER_NAME=${SERVER_NAME:-Super Zoo Server}
       - GAMEMODE=${GAMEMODE:-creative}
       - DIFFICULTY=${DIFFICULTY:-peaceful}
       - ALLOW_CHEATS=${ALLOW_CHEATS:-true}
-      - MAX_PLAYERS=${MAX_PLAYERS:-10}
-      - LEVEL_NAME=${LEVEL_NAME:-super-zoo}
+      - MAX_PLAYERS=${MAX_PLAYERS:-20}
+      - LEVEL_NAME=super-zoo
       
       # Network settings
       - ENABLE_LAN_VISIBILITY=${ENABLE_LAN_VISIBILITY:-true}
@@ -36,8 +39,8 @@ services:
       - EXPERIMENTS=${EXPERIMENTS:-data_driven_items,upcoming_creator_features,beta_apis,cameras}
       
       # Performance settings
-      - VIEW_DISTANCE=${VIEW_DISTANCE:-10}
-      - TICK_DISTANCE=${TICK_DISTANCE:-4}
+      - VIEW_DISTANCE=${VIEW_DISTANCE:-12}
+      - TICK_DISTANCE=${TICK_DISTANCE:-6}
       
       # Timezone
       - TZ=${TZ:-America/New_York}
@@ -53,7 +56,6 @@ services:
     networks:
       - zoo-network
 
-# Named volumes for persistent data
 # Network for the zoo server
 networks:
   zoo-network:
