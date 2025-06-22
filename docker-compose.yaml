@@ -1,0 +1,60 @@
+services:
+  minecraft-zoo:
+    image: itzg/minecraft-bedrock-server:latest
+    container_name: minecraft-zoo-server
+    restart: unless-stopped
+    stdin_open: true
+    tty: true
+    ports:
+      - "${MINECRAFT_PORT:-19132}:19132/udp"  # Bedrock port (configurable)
+      - "${RCON_PORT:-25575}:25575/tcp"       # RCON port (configurable)
+    volumes:
+      # Use test-data directory structure (works for both local and production)
+      - ./test-data:/data
+      # Mount addon packs (these override the copies in test-data)
+      - ./minecraft-zoo-addon/packs/behavior_pack:/data/behavior_packs/zoo-addon-bp
+      - ./minecraft-zoo-addon/packs/resource_pack:/data/resource_packs/zoo-addon-rp
+    environment:
+      # Core server settings
+      - EULA=TRUE
+      - SERVER_NAME=${SERVER_NAME:-Minecraft Zoo Server}
+      - GAMEMODE=${GAMEMODE:-creative}
+      - DIFFICULTY=${DIFFICULTY:-peaceful}
+      - ALLOW_CHEATS=${ALLOW_CHEATS:-true}
+      - MAX_PLAYERS=${MAX_PLAYERS:-10}
+      - LEVEL_NAME=${LEVEL_NAME:-zoo-world}
+      
+      # Network settings
+      - ENABLE_LAN_VISIBILITY=${ENABLE_LAN_VISIBILITY:-true}
+      - ONLINE_MODE=${ONLINE_MODE:-false}
+      
+      # RCON settings (for remote management)
+      - ENABLE_RCON=${ENABLE_RCON:-true}
+      - RCON_PASSWORD=${RCON_PASSWORD:-zoo-admin-2024}
+      
+      # Enable experiments for addon features
+      - EXPERIMENTS=${EXPERIMENTS:-data_driven_items,upcoming_creator_features,beta_apis,cameras}
+      
+      # Performance settings
+      - VIEW_DISTANCE=${VIEW_DISTANCE:-10}
+      - TICK_DISTANCE=${TICK_DISTANCE:-4}
+      
+      # Timezone
+      - TZ=${TZ:-America/New_York}
+    
+    # Health check to ensure server is running
+    healthcheck:
+      test: ["CMD-SHELL", "mc-monitor status bedrock --host localhost --port 19132"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+    
+    networks:
+      - zoo-network
+
+# Named volumes for persistent data
+# Network for the zoo server
+networks:
+  zoo-network:
+    driver: bridge 
