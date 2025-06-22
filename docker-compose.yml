@@ -9,11 +9,13 @@ services:
       - "${MINECRAFT_PORT:-19132}:19132/udp"  # Bedrock port (configurable)
       - "${RCON_PORT:-25575}:25575/tcp"       # RCON port (configurable)
     volumes:
-      # Use test-data directory (contains the zoo-test-world with zoo addon)
-      - ./test-data:/data
+      # Use minecraft-zoo-server directory (contains the real super-zoo world)
+      - ./minecraft-zoo-server:/data
       # Mount addon packs so they're available
       - ./minecraft-zoo-addon/packs/behavior_pack:/data/behavior_packs/zoo-addon-bp
       - ./minecraft-zoo-addon/packs/resource_pack:/data/resource_packs/zoo-addon-rp
+    env_file:
+      - .env.production
     environment:
       # Core server settings
       - EULA=TRUE
@@ -21,22 +23,22 @@ services:
       - GAMEMODE=${GAMEMODE:-creative}
       - DIFFICULTY=${DIFFICULTY:-peaceful}
       - ALLOW_CHEATS=${ALLOW_CHEATS:-true}
-      - MAX_PLAYERS=${MAX_PLAYERS:-10}
-      - LEVEL_NAME=${LEVEL_NAME:-zoo-test-world}
+      - MAX_PLAYERS=${MAX_PLAYERS:-20}
+      - LEVEL_NAME=${LEVEL_NAME:-super-zoo}
       
       # Network settings
       - ENABLE_LAN_VISIBILITY=${ENABLE_LAN_VISIBILITY:-true}
-      - ONLINE_MODE=${ONLINE_MODE:-false}
+      - ONLINE_MODE=${ONLINE_MODE:-true}
       
       # RCON settings (for remote management)
       - ENABLE_RCON=${ENABLE_RCON:-true}
-      - RCON_PASSWORD=${RCON_PASSWORD:-zoo-admin-2024}
+      - RCON_PASSWORD=${RCON_PASSWORD:-Zoo2025}
       
       # Enable experiments for addon features
       - EXPERIMENTS=${EXPERIMENTS:-data_driven_items,upcoming_creator_features,beta_apis,cameras}
       
       # Performance settings
-      - VIEW_DISTANCE=${VIEW_DISTANCE:-10}
+      - VIEW_DISTANCE=${VIEW_DISTANCE:-12}
       - TICK_DISTANCE=${TICK_DISTANCE:-4}
       
       # Timezone
@@ -53,7 +55,6 @@ services:
     networks:
       - zoo-network
 
-# Named volumes for persistent data
 # Network for the zoo server
 networks:
   zoo-network:
